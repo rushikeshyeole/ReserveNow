@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chetana Template">
+    <meta name="keywords" content="Chetana, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chetana</title>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" type="text/css">.<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Josefin+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Teko:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .tbmsg{
+            color: aliceblue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__btn__widget">
+            <a href="/">Book Now</span></a>
+        </div>
+        <div class="offcanvas__widget">
+            <ul>
+                <li><span class="icon_pin_alt"></span> Dhule </li>
+                <li><span class="icon_phone"></span> +91 8928009999</li>
+            </ul>
+        </div>
+        <div class="offcanvas__language">
+            <img src="{% static 'assets/img/lan.png' %}" alt="">
+            <span>English</span>
+            <i class="fa fa-angle-down"></i>
+            <ul>
+                <li>English</li>
+                <li>Bangla</li>
+            </ul>
+        </div>
+        <div class="offcanvas__auth">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="header__top__widget">
+                            <li><span class="icon_pin_alt"></span>Dhule</li>
+                            <li><span class="icon_phone"></span>+91 8928009999</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="header__top__right">
+                            <div class="header__top__auth">
+                                <ul>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                            <!-- 
+                            <div class="header__top__language">
+                                <img src="{% static 'assets/img/lan.png' %}" alt="">
+                                <span>English</span>
+                                <i class="fa fa-angle-down"></i>
+                                <ul>
+                                    <li>English</li>
+                                    <li>Bangla</li>
+                                </ul>
+                            </div>
+                              -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav__option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="header__logo">
+                            <a href="./index.html"><img src="{% static 'assets/img/logo2.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header__nav">
+                            <nav class="header__menu">
+                                <ul class="menu__class">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="Rooms">Tables</a></li>
+                                    <li  class="active"><a href="Restaurant">Restaurant</a></li>
+                                    <li><a href="About">About Us</a></li>
+                                    <!--    
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./about.html">About Us</a></li>
+                                            <li><a href="./room-details.html">Room Details</a></li>
+                                            <li><a href="./blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                     -->
+                                    <!-- <li><a href="./blog.html">News</a></li> -->
+                                    <li><a href="Contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header__nav__widget">
+                                <a href="/">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open">
+                    <span class="fa fa-bars"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+   
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option set-bg" data-setbg="{% static 'assets/img/breadcrumb-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h1>Our Thali</h1>
+                        <h4>with</h4>
+                        <h2>Today's Menu</h2>
+                        <div class="breadcrumb__links">
+                            <!-- <a href="/">Home</a>
+                            <span>Rooms</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Rooms Section Begin -->
+    <section class="rooms spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0 order-lg-2 order-md-2 col-md-6">
+                    <div class="room__pic__slider owl-carousel">
+                        <div class="room__pic__item set-bg" data-setbg="{% static 'assets/img/thali/thali-1.png' %}"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0 order-lg-1 order-md-1 col-md-6">
+                    <div class="room__text">
+                        <h3>Today's Thali</h3>
+                        <h2><sup>₹</sup>170
+
+                        <ul>
+                            <li>Rice : Steam rice, {% for items in T_Items %}<b>{{items.Rice}}</b>{% endfor %} </li>
+                            <li>Gravy Bhaji / Sabji : Aaloo,  {% for items in T_Items %}<b>{{items.G_bhaji}}</b>{% endfor %}</li>
+                            <li>Sukhi Bhaji / Sabji :  {% for items in T_Items %}<b>{{items.S_bhaji}}</b>{% endfor %}</li>
+                            <li>Sweet : Aamrakhanda , {% for items in T_Items %}<b>{{items.Sweet}}</b>{% endfor %}</li>
+                            
+                        </ul>             
+                        <!-- <a href="#">View Details</a> -->
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+    {% endblock %}

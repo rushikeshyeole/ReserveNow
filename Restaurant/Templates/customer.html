@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to our Restaurent</title>
+       
+</head>
+<body>
+        <form action="cus_Or" method="post">
+            {% csrf_token %}
+            <h1>Book Your Table Here</h1>
+        <label>Customer Name : </label><br>
+        <input type="text" id="fname" name="C_name" value=""><br><br>
+
+        <label>Time for Booking : </label><br>
+        <input type="time" id="lname" name="C_time" value=""><br><br>
+
+        <label>How many people you are : </label><br>
+        <input type="number" name="C_people"><br><br>
+
+        <input type="submit" value="submit"><br>
+        </form>
+        {{msg}}<br><br>
+
+        
+
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #timer-box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      color: white;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 60s linear;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="color-box"></div> -->
+  <div id="timer-box">1:00</div>
+  <button onclick="resetTimer();resetColor()">Reset Timer</button>
+
+  <script>
+    window.addEventListener("load", function () {
+      var box = document.getElementById("timer-box");
+      box.style.backgroundColor = "green";
+    });
+
+    function resetColor() {
+      var box = document.getElementById("color-box");
+      box.style.backgroundColor = "red";
+      startColorTransition();
+    }
+
+    startColorTransition();
+  </script>
+ <script>
+  var timerBox = document.getElementById("timer-box");
+  var intervalId;
+
+  function startTimer() {
+    clearInterval(intervalId); // Clear any previous interval
+    var timer = 60; // 60 seconds (1 minute)
+
+    function countdown() {
+      var minutes = Math.floor(timer / 60);
+      var seconds = timer % 60;
+      var timeString = minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
+
+      timerBox.innerText = timeString;
+
+      if (timer === 0) {
+        clearInterval(intervalId);
+      } else {
+        timer--;
+      }
+    }
+
+    intervalId = setInterval(countdown, 1000); // Run the countdown function every second
+  }
+
+  function resetTimer() {
+    clearInterval(intervalId); // Clear the current interval
+    timerBox.innerText = "1:00";
+    startTimer(); // Start the timer again
+  }
+
+  startTimer(); // Start the timer initially
+</script>
+</body>
+
+</html>

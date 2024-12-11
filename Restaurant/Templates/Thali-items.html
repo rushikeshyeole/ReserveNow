@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todays' Thali Items</title>
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/style1.css' %}" type="text/css">
+
+<style>
+       table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      color: black;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .delete-button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .delete-button:hover {
+      background-color: #d32f2f;
+    }   
+
+</style> 
+</head>
+<body>
+    <form action="Thali_Items_save" method="post" class="filter__form">
+      {% csrf_token %}
+      <label for="name">Rice :</label>
+      <input type="text" id="name" name="T_rice">
+  
+      <label for="email">Gravy Bhaji / Sabji:</label>
+      <input type="text" id="email" name="T_G_Bhaji"  required>
+  
+      <label for="subject">Sukhi Bhaji / Sabji :</label>
+      <input type="text" id="subject" name="T_S_Bhaji"  required>
+  
+      <label for="message">Sweet :</label>
+      <input type="text" id="message" name="T_sweet"  required>
+  
+      <button>Submit</button>
+      <button><a href="Thali_items_SO">Show last Items</a></button>
+  </form>
+ 
+  {{msg}}
+
+  <table>
+    <tr>
+      <th>Rice</th>
+      <th>Gravy Bhaji</th>
+      <th>Sukhi Bhaji</th>
+      <th>Sweet</th>
+      <th></th>
+    </tr>
+    {% for i in T_O_Items %}
+    <tr>
+        <td>{{i.Rice}}</td>
+        <td>{{i.G_bhaji}}</td>
+        <td>{{i.S_bhaji}}</td>
+        <td>{{i.Sweet}}</td>
+        <td><a href="Thali_items_delete"><button class="delete-button">Delete</button></a></td>
+    </tr>
+    {% endfor %}
+    <!-- Add more rows here as needed -->
+  </table>
+
+  <!-- <script>
+    function deleteRow(button) {
+      // Find the parent row and remove it
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script> -->
+
+  <!-- <table>
+    <tr>
+        <th>Rice</th>
+        <th>Gravy Bhaji</th>
+        <th>Sukhi Bhaji</th>
+        <th>Sweet</th>
+    </tr>
+    {% for i in T_O_Items %}
+    <tr>
+        <td>{{i.Rice}}</td>
+        <td>{{i.G_bhaji}}</td>
+        <td>{{i.S_bhaji}}</td>
+        <td>{{i.Sweet}}</td>
+    </tr>
+    {% endfor %}
+  </table> -->
+
+  <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
+  <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

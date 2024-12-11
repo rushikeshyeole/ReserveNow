@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Data</title>
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/style1.css' %}" type="text/css">
+
+<style>
+    
+    /* .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  float: left;
+  margin: 0;
+  font-size: 24px;
+}
+
+.btn {
+  float: right;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+} */
+
+
+
+</style> 
+</head>
+<body>
+    <div class="header-wrapper">
+        <h1 class="heading">Customer Data</h1>
+        <a href="Todays_Thali_Items"><button class="btn" type="button">Today's Item</button></a>
+        <a href="Box_co_ch"><button class="btn" type="button">Tables</button></a>
+      </div>
+      
+      
+      
+    <!-- <div class="header">
+    <h1>
+        Customer Data
+    </h1>
+    <a href=""><button class="button">Thali Items</button></a>
+    </div> -->
+    <table>
+        <tr>
+            <th>Customer Name</th>
+            <th>Time</th>
+            <th>Date</th>
+            <th>People</th>
+        </tr>
+        {% for i in Obj_Cus_Data %}
+        <tr>
+            <td>{{i.Cus_name}}</td>
+            <td>{{i.Cus_time}}</td>
+            <td>{{i.Cus_date}}</td>
+            <td>{{i.Cus_people}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+  <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
+  <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
